@@ -168,4 +168,5 @@ with gr.Blocks() as demo:
     )
     clear.click(gradio_reset, [chat_state, img_list], [chatbot, image, text_input, upload_button, chat_state, img_list], queue=False)
 
-demo.launch(share=True, enable_queue=True)
+# 打开端口外部可访问 server_name="0.0.0.0"
+demo.launch(server_name="0.0.0.0", share=True, enable_queue=True)
